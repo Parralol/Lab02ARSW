@@ -16,6 +16,11 @@
     <maven-javadoc-plugin.version>3.0.0</maven-javadoc-plugin.version>
   </properties>
   <dependencies>
+  <dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-csv</artifactId>
+    <version>1.8</version>
+  </dependency>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-api</artifactId>

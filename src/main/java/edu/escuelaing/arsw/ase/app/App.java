@@ -35,9 +35,9 @@ public final class App {
         if(files.size()>1) throw new Exception("There is more than 1 file with the same name");
         if( files.size()<1)throw new Exception("There is no more than 1 file with the same name");
         if(args[0].equals("phy")){
-            res = Phy.calculate(files.get(0));
+            //res = Phy.calculate(files.get(0));
         }else if(args[0].equals("loc")){
-            res = Loc.calculate(files.get(0));
+            // res = Loc.calculate(files.get(0));
         }else{
             throw new Exception("Argument error, should be \"phy\" or \"loc\" ");
         }
