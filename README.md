@@ -7,8 +7,13 @@ This program allow the user to process a set of data from a csv file, given it's
 
 ![image](https://github.com/Parralol/Lab02ARSW/assets/110953563/b3c10b10-cfb9-4dab-9fc8-3918e53e4e41)
 
+As seen by the following diagram, in this case we will model the LinkedList implementation as requested by the document, in order to represent a generic type of data the _T_ used in the upper-right corner we can see it's definition, this interpretation means that LinkedList is a generic type.
 
+LinkedList has a oneWay usage of Node<T> (note that this expression means that node is any type of data) which is stored in two variables, head and tail and has a nested relationship with node class, this means that node resides inside of the LinkedList class, as part of the estructure of the class, inside of every Node object resides two attributes: prev & next, this means that insisde of every Node a reference of the previous and next Node is stored.
 
+The relationship between Node<T> and Node represents that any Node<T> is binded to Node by it's generic types _T_.
+
+Now, App is the main class, in which Lister and CsvArray are used for their listAllFiles and getCsv methods respectively, CsvArray has a records attribute in which a LinkedList<String> is used, this LinkedList is binded to LinkedList class using it's generic type _T_ as _String_, App uses this same type of LinkedList, only that it's represented in two attributes: data & response, as the name implies this Lists store data and the response from the program respectively, App uses a interface named Calculator, this interface is the one used to store lambda functions, this is implied in the attributes names: deviation & mean, the names are self explainatory, the attributes represented by '~' it's because they are static methods with package visibility (have default visibility)
 
 ## Getting Started
 
@@ -65,53 +70,39 @@ And a acceptance test
 
 * **testSelectFiles**
 
-    This test allow us to assure that the selection of files in the phy case works, this will asure that the program reads the files accordingly. 
+    This test allow us to assure that the selection of files  works, this will asure that the program reads the files accordingly. 
 
 * **testConvert**
   
-    This test allow us to assure that the selection of files in the loc case works, this will asure that the program reads the files accordingly. 
+    This test allow us to assure that the processed data is converted into a comprehensible manner, so that processing it's data is easier.
 
 * **testGenerateLambdas**
   
-     This test allow us to assure that the selection of files in both cases works, this will asure that the program reads the files accordingly and only validates one file. 
+     This test allow us to assure that the generation of the lambda functions works properly.
 
 * **testGenerateResponse**
 
-  This test allow us to assure that the selection of files in both cases works, this will asure that the program reads the files accordingly and will validate if no file exists.
+  This test allow us to assure that the output is the way it was designed to be
 
 * **testIntegration**
 
-  Validates if loc or phy is entered, if not it should raise an error.
+  Validates if all methods in the program work properly.
 
 
 ### Acceptance test
 
-this acceptance test is build around the following file which you can see here -> [file used]()
+this acceptance test is build around the following file which you can see here -> [file used](https://github.com/Parralol/Lab02ARSW/blob/main/resources/mock.csv)
 
 
 ![image](https://github.com/Parralol/Lab02ARSW/assets/110953563/18bd4de0-b6da-4d1f-8274-96074ffa484d)
 
 
+we proceed to test the mock.csv file, once entered we get:
 
 ![image](https://github.com/Parralol/Lab02ARSW/assets/110953563/3de9d8ee-6e32-4f89-bbd1-4e253ce68109)
 
 
-![image](https://github.com/Parralol/Lab01ARSW/assets/110953563/68b6b00b-53b8-4777-82ca-6a50336696eb)
-
-we proceed to test the loc option, once entered we get:
-
-![image](https://github.com/Parralol/Lab01ARSW/assets/110953563/c159f251-caf0-4a5f-a448-48451815d9f0)
-
-
-and if we test phy we get
-
-![image](https://github.com/Parralol/Lab01ARSW/assets/110953563/3cc3ca2e-6bdb-4b36-a6a2-357cc627361f)
-
-as we can see, if you execute this .jar whenever you are executing it, it will find it's files and read them.
-
-
-
-the corresponding answer.
+as we can see, if you execute this .jar whenever you are executing it, it will find it's files and read them, also we get the corresponding answer.
 
 ## Deployment
 
@@ -120,18 +111,12 @@ the corresponding answer.
 if you want to use te programm before using the package command we use
 
 ```
-mvn -e exec:java -Dexec'.mainClass=edu.escuelaing.arsw.ase.app.App' -Dexec'.args=<loc, phy> <file you want to use>'
+mvn -e exec:java -Dexec'.mainClass=edu.escuelaing.arsw.ase.app.App' -Dexec'.args=<.csv file you want to use>'
 ```
 or (depending on your system)
 
 ```
-mvn -e exec:java -Dexec.mainClass=edu.escuelaing.arsw.ase.app.App -Dexec.args=<loc, phy> <file you want to use>
-```
-
-to execute the program like it's intended we'll need to enter
-
-```
-countlines <phy | loc> <program to count lines>
+mvn -e exec:java -Dexec.mainClass=edu.escuelaing.arsw.ase.app.App -Dexec.args=<.csv file you want to use>
 ```
 
 ## Built With
