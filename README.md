@@ -86,7 +86,7 @@ And a acceptance test
 
 * **testIntegration**
 
-  Validates if all methods in the program work properly.
+  Validates if all methods in the program work properly in a controlled enviroment and sequential execution.
 
 
 ### Acceptance test
