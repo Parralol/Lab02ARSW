@@ -1,7 +1,9 @@
 # Lab 02 ARSW
 
-This program allow the user to process a set of data from a csv file, given it's columnn name and following data in a table-like format, processing it's mean and standard deviation and giving it's output in the terminal [Repo Link](https://github.com/Parralol/Lab02ARSW)
-2024/06/14
+This program allow the user to process a set of data from a csv file, given it's columnn name and following data in a table-like format, processing it's mean and standard deviation and giving it's output in the terminal 
+[Repo Link](https://github.com/Parralol/Lab02ARSW)
+
+made at: 2024/06/14
 
 ## Architecture (Class diagram)
 
