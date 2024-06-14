@@ -42,19 +42,31 @@ public final class App {
         data = CsvArray.getCsv(files.get(0));
     }  
 
+    /**
+     * Transforms the List in a desired order
+     * @return a List of Lists in the desired order
+     */
     @SuppressWarnings("rawtypes")
-    private static List<LinkedList<Double>> convert(){
+    static List<LinkedList<Double>> convert(){
         List<LinkedList<Double>> resp = new ArrayList<>();
         for(LinkedList a: data){
             LinkedList<Double> resv = new LinkedList<>();
             for(int i = 1; i<a.size();i++){
+                try{
                 resv.add(Double.parseDouble((String)a.get(i)));
+                }catch(Exception e){
+
+                }
             }
             resp.add(resv);
         }
         return resp;
     }
 
+    /**
+     * prepares the paths for the found files
+     * @throws IOException
+     */
     private static void prepareFiles() throws IOException{
         System.out.println("Working Directory = " + System.getProperty("user.dir"));
         String xd = System.getProperty("user.dir");
@@ -63,7 +75,10 @@ public final class App {
     }
 
 
-    private static void generateLambdas(){
+    /**
+     * Generates the program lambdas
+     */
+    public static void generateLambdas(){
         mean = (data) -> {
             Double res = 0.0;
             for(int i =0; i<data.size(); i++){
@@ -74,12 +89,10 @@ public final class App {
         };
 
        deviation = (data) ->{
-
         Double sum = 0.0;
         for(int i = 0 ; i< data.size(); i++){
             sum += data.get(i);
         }
-
         Double res = 0.0;
         int size = data.size();
         double mean = sum / size;
@@ -88,12 +101,13 @@ public final class App {
         }
         return Double.toString( Math.sqrt(res / (size - 1)));
         };
-
-
     }
 
+    /**
+     * Method in charge of delivering the output
+     */
     @SuppressWarnings({ "rawtypes", "unchecked" })
-    private static void generateResponse(){
+    static void generateResponse(){
         List<LinkedList<Double>> respo =  convert();
         LinkedList<String> header = new LinkedList<>();
         header.add("Mean");
@@ -118,6 +132,7 @@ public final class App {
             count +=1;
         }
     }
+
     /**
      *  Main method
      * @param args The arguments of the program.
@@ -128,7 +143,6 @@ public final class App {
         selectFiles(args);
         generateLambdas();
         generateResponse();
-        
     }
 
     
