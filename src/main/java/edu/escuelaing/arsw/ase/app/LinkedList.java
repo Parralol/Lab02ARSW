@@ -122,7 +122,7 @@ public class LinkedList<T> {
 
     /**
      * Gets the next node of the specified node
-     * @param data the data of the node to find the next node for
+     * @param data the data of the node to find the next node
      * @return the data of the next node, or null if there is no next node
      */
     public T nextNode(T data) {
@@ -135,7 +135,7 @@ public class LinkedList<T> {
 
     /**
      * Gets the prior node of the specified node
-     * @param data the data of the node to find the prior node for
+     * @param data the data of the node to find the prior node
      * @return the data of the prior node, or null if there is no prior node
      */
     public T priorNode(T data) {

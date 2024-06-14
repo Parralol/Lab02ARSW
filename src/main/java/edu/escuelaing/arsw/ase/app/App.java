@@ -16,6 +16,7 @@ public final class App {
     //Lambda functions
     static Calculator deviation; 
     static Calculator mean;
+
     static List<LinkedList<String>> data;
     static List<LinkedList<String>> resp = new ArrayList<>();
 
@@ -27,7 +28,7 @@ public final class App {
 
     /**
      * Selects files in the current directory
-     * @param args
+     * @param args 
      * @throws Exception
      */
     public static void selectFiles(String[] args) throws Exception{

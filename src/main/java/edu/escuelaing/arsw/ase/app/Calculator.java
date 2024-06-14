@@ -2,6 +2,12 @@ package edu.escuelaing.arsw.ase.app;
 
 public interface Calculator {
     
-    String operation(LinkedList<Double> data);
+    /**
+     * Empty method to store lambda funcions
+     * 
+     * @param data
+     * @return
+     */
+   public String operation(LinkedList<Double> data);
 
 }

@@ -34,7 +34,7 @@ public class CsvArray {
     /**
      * Method made to convert from String[] to LinkedList<String>
      * @param a the array
-     * @return
+     * @return the convertion to a more comprehensible list
      */
     private static LinkedList<String> convertTo(String[] a){
         LinkedList<String> res = new LinkedList<>();
@@ -47,7 +47,7 @@ public class CsvArray {
     /**
      * organices the ArrayList so that it's easier to process the data
      * @param a unorganized List of Lists
-     * @return
+     * @return the organized List
      */
     private static List<LinkedList<String>> organize(List<LinkedList<String>> a){
         List<LinkedList<String>> response = new ArrayList<>();
