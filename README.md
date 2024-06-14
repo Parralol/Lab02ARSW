@@ -56,40 +56,45 @@ mvn test
 ```
 this program works with the following tests:
 
-![image](https://github.com/Parralol/Lab01ARSW/assets/110953563/1b5c19d6-0f1d-43bf-b1f4-4fdb767c5844)
+![image](https://github.com/Parralol/Lab02ARSW/assets/110953563/fe8a0e8e-00bc-4269-8c0a-98483b6b4523)
+
 
 And a acceptance test
 
 ### Break down into end to end tests
 
-* **testSelectFiles_phy**
+* **testSelectFiles**
 
     This test allow us to assure that the selection of files in the phy case works, this will asure that the program reads the files accordingly. 
 
-* **testSelectFiles_loc**
+* **testConvert**
   
     This test allow us to assure that the selection of files in the loc case works, this will asure that the program reads the files accordingly. 
 
-* **testSelectFiles_throwsExceptionForMultipleFiles**
+* **testGenerateLambdas**
   
      This test allow us to assure that the selection of files in both cases works, this will asure that the program reads the files accordingly and only validates one file. 
 
-* **testSelectFiles_throwsExceptionForNoFiles**
+* **testGenerateResponse**
 
   This test allow us to assure that the selection of files in both cases works, this will asure that the program reads the files accordingly and will validate if no file exists.
 
-* **testSelectFiles_throwsExceptionForInvalidArgument**
+* **testIntegration**
 
   Validates if loc or phy is entered, if not it should raise an error.
-
-* **testFileHasFourLOC**
-
-  This test validates if the program calculates correctly the amount of lines of code.
 
 
 ### Acceptance test
 
-this acceptance test is build around the following file which you can see here -> [file used](https://github.com/Parralol/Lab01ARSW/blob/main/Test%20set/xd/Peticion.java)
+this acceptance test is build around the following file which you can see here -> [file used]()
+
+
+![image](https://github.com/Parralol/Lab02ARSW/assets/110953563/18bd4de0-b6da-4d1f-8274-96074ffa484d)
+
+
+
+![image](https://github.com/Parralol/Lab02ARSW/assets/110953563/3de9d8ee-6e32-4f89-bbd1-4e253ce68109)
+
 
 ![image](https://github.com/Parralol/Lab01ARSW/assets/110953563/68b6b00b-53b8-4777-82ca-6a50336696eb)
 
