@@ -1,6 +1,6 @@
 # Lab 02 ARSW
 
-This program allow the user to process a set of data from a csv file, given it's columnn name and following data in a table-like format, processing it's mean and standard deviation and giving it's output in the terminal 
+This program allow the user to process a set of data from a csv file, given it's columnn name and following data in a table-like format, processing it's mean and standard deviation and giving it's output in the terminal this repo counts with two datasets: mock.csv and Mock2.csv
 
 
 [Repo Link](https://github.com/Parralol/Lab02ARSW)
@@ -51,12 +51,7 @@ First clone this proyect into your own system, then enter in the terminal, on th
 mvn clean package
 ```
 
-then we enter the following command once inside the directory of the cloned repo
-
-```
-java -jar  target\calculator-1.0-SNAPSHOT.jar <.csv file you want to use>
-```
-and the we can execute the program
+then we enter the following command once inside the directory of the cloned repo and the we can execute the program
 
 
 ## Running the tests
@@ -114,7 +109,7 @@ as we can see, if you execute this .jar whenever you are executing it, it will f
 
 **IN ORDER FOR THIS PROGRAM TO WORK, YOU'LL NEED TO EXECUTE THE PROGRAM ON THE FOLDER YOU WANT TO WORK WITH, WITH THE FILES YOU WANT TO WORK WITH**
 
-if you want to use te programm before using the package command we use
+if you want to use the programm before using the package command we use
 
 ```
 mvn -e exec:java -Dexec'.mainClass=edu.escuelaing.arsw.ase.app.App' -Dexec'.args=<.csv file you want to use>'
@@ -123,6 +118,19 @@ or (depending on your system)
 
 ```
 mvn -e exec:java -Dexec.mainClass=edu.escuelaing.arsw.ase.app.App -Dexec.args=<.csv file you want to use>
+```
+
+to execute using JAR:
+
+```
+$ java -jar  target/calculator-1.0-SNAPSHOT.jar <.csv file you want to use> 
+
+```
+
+for example:
+
+```
+$ java -jar  target/calculator-1.0-SNAPSHOT.jar mock.csv 
 ```
 
 ## Built With
