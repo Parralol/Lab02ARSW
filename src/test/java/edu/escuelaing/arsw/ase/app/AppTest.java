@@ -11,7 +11,6 @@ class AppTest {
     void setUp() {
         App.allFiles = new ArrayList<>();
         App.files = new ArrayList<>();
-        App.res = new String[]{};
     }
 
 

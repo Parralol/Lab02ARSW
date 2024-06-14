@@ -95,8 +95,13 @@ public class LinkedList<T> {
     public void printList() {
         Node<T> current = head;
         while (current != null) {
-            System.out.print(current.data + ", ");
-            current = current.next;
+            if(current.next != null){
+                System.out.print(current.data + ", ");
+                current = current.next;
+            }else{
+                System.out.print(current.data );
+                current = current.next;
+            }
         }
         System.out.println();
     }
@@ -140,5 +145,7 @@ public class LinkedList<T> {
         }
         return (current != null && current.prev != null) ? current.prev.data : null;
     }
+
+
  
 }
