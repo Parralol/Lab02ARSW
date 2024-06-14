@@ -15,6 +15,8 @@ The relationship between Node<T> and Node represents that any Node<T> is binded 
 
 Now, App is the main class, in which Lister and CsvArray are used for their listAllFiles and getCsv methods respectively, CsvArray has a records attribute in which a LinkedList<String> is used, this LinkedList is binded to LinkedList class using it's generic type _T_ as _String_, App uses this same type of LinkedList, only that it's represented in two attributes: data & response, as the name implies this Lists store data and the response from the program respectively, App uses a interface named Calculator, this interface is the one used to store lambda functions, this is implied in the attributes names: deviation & mean, the names are self explainatory, the attributes represented by '~' it's because they are static methods with package visibility (have default visibility)
 
+In this desing it was intended to use Factory Method (creational pattern) and Template method (behavioral pattern), the factory method is seen all inside the code, however the template method is only seen as the execution of the program is divided inside of it's diferents stages represented by methods.
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
