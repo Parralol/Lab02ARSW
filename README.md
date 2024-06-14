@@ -5,17 +5,10 @@ This program allow the user to process a set of data from a csv file, given it's
 
 ## Architecture (Class diagram)
 
-![image](https://github.com/Parralol/Lab01ARSW/assets/110953563/a1b15734-af58-44e5-a4b4-f2ddd36370a6)
+![image](https://github.com/Parralol/Lab02ARSW/assets/110953563/b3c10b10-cfb9-4dab-9fc8-3918e53e4e41)
 
-As you can see, there is not an especified connection between app and Loc, Lister and Phy, this is because App only uses them for their methods, however they do not get stored as a variable nor in an Array or a List.
 
-App consist of two attributes being files which is an ArrayList identified in a generic class (List) of Strings, this attribute saves all paths leading to certain files, this attribute is public static, the same happens with res, however res is the variable which saves up the response from Phy or Loc and displays it to the user, consists on 3 methods: App (it's a private constructor), SelectFiles (it's a public method which parameter is the arguments of the main method) and main (the good ol' main method ).
 
-For Lister we have only one method: listAllFiles() (method in charge to list and get all files from a directory to all directories, this method recieves the current path as a Path object and all files as a List of Path)
-
-Phy and it's only method counts all lines in a file with it's method: calculate (as parameter gets the name of the file which will be used and returns a list of String, this being the whole file and the number of lines)
-
-Loc class has a javadoc attribute, which is an boolean attribute that allows us to know when a line is javadoc or not, consists of two methods: calculate (counts and saves each line of code, excluding white lines and comments and returns the whole document whitout them and it's number of lines) and analize (recieves a line and processes it validating it's not a comment, wildcard or whitespace)
 
 ## Getting Started
 
