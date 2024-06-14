@@ -13,7 +13,9 @@ public final class App {
 
     static List<Path> allFiles = new ArrayList<>();
     static List<String> files = new ArrayList<>();
-
+    //Lambda functions
+    static Calculator deviation; 
+    static Calculator mean;
     static List<LinkedList<String>> data;
     static List<LinkedList<String>> resp = new ArrayList<>();
 
@@ -61,6 +63,35 @@ public final class App {
     }
 
 
+    private static void generateLambdas(){
+        mean = (data) -> {
+            Double res = 0.0;
+            for(int i =0; i<data.size(); i++){
+                res += data.get(i);
+            }
+            res = res/data.size();
+            return res.toString();
+        };
+
+       deviation = (data) ->{
+
+        Double sum = 0.0;
+        for(int i = 0 ; i< data.size(); i++){
+            sum += data.get(i);
+        }
+
+        Double res = 0.0;
+        int size = data.size();
+        double mean = sum / size;
+        for(int i = 0 ; i< size; i++){
+            res += Math.pow(data.get(i) - mean, 2);
+        }
+        return Double.toString( Math.sqrt(res / (size - 1)));
+        };
+
+
+    }
+
     @SuppressWarnings({ "rawtypes", "unchecked" })
     private static void generateResponse(){
         List<LinkedList<Double>> respo =  convert();
@@ -70,8 +101,8 @@ public final class App {
         for(LinkedList a : respo){
             LinkedList<String> resv = new LinkedList<>();
             resp.add(header);
-            resv.add(Calculator.mean(a));
-            resv.add(Calculator.stdDeviation(a));
+            resv.add(mean.operation(a));
+            resv.add(deviation.operation(a));
             resp.add(resv);
         }
         int count = 0;
@@ -95,6 +126,7 @@ public final class App {
     public static void main(String[] args) throws Exception {
         prepareFiles();
         selectFiles(args);
+        generateLambdas();
         generateResponse();
         
     }

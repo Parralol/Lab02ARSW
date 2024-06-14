@@ -1,7 +1,9 @@
 package edu.escuelaing.arsw.ase.app;
 
-public class Calculator {
+public interface Calculator {
     
+    String operation(LinkedList<Double> data);
+
     public static String mean(LinkedList<Double> data){
         Double res = 0.0;
         for(int i =0; i<data.size(); i++){
