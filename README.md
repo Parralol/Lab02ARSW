@@ -1,20 +1,7 @@
 # Lab 02 ARSW
 
-This program allow the user to count the number of lines of code of the file prompted in the terminal, developed in 
-2024/06/12
-
-### LOC/h
-
-Total time spent in this proyect: 6hrs
-Total lines of code: 
-
-* App.java = 41
-* Lister.java = 22
-* Loc.java = 55
-* Phy.java = 26
-* AppTest.java = 62
-
-**In total i did 206 lines of code making my LOC/h = 34.33333**
+This program allow the user to process a set of data from a csv file, given it's columnn name and following data in a table-like format, processing it's mean and standard deviation and giving it's output in the terminal
+2024/06/14
 
 ## Architecture (Class diagram)
 
@@ -54,45 +41,18 @@ mvn -version
 
 ### Installing
 
-First clone this proyect into your own system, then 
+First clone this proyect into your own system, then enter in the terminal, on the cloned repository
 
 ```
 mvn clean package
 ```
 
-
-### Windows
-
-first we create a file named 'countlines.bat'
-```
-echo @echo off > countlines.bat
-```
-
-then we enter inside of the file
+then we enter the following command once inside the directory of the cloned repo
 
 ```
-echo java -jar  target\loc-1.0-SNAPSHOT.jar %* >> countlines.bat
+java -jar  target\calculator-1.0-SNAPSHOT.jar <.csv file you want to use>
 ```
 and the we can execute the program
-
-### linux/macOS
-
-first create a file named 'countlines'
-```
-touch countlines
-```
-and we give it execution permissions
-
-```
-chmod +x countlines
-```
-
-then we edit the file so that it executes the following
-
-```
-#!/bin/bash
-java -jar path/to/your/target/LineCounter-1.0-SNAPSHOT-jar-with-dependencies.jar "$@"
-```
 
 
 ## Running the tests
